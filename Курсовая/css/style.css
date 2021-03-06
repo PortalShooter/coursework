@@ -373,7 +373,7 @@
     color: #fff;
 }
 /* Checkbox */
-.checkbox {
+.checkbox__list {
     display: flex;
     flex-direction: column;
     margin-bottom: 32px;
@@ -382,36 +382,52 @@
     color: #fff;
     font-weight: 700;
 }
-.label-check {
-    cursor: pointer;
+/* .checkbox {
     position: relative;
-    padding-left: 20px;
-    color: #fff;
-}
-.check {
+} */
+.checkbox__input {
     display: none;
 }
-.check + span {
-    position: absolute;
-    left: 0;
-    top: 10px;
+.checkbox__label {
+    position: relative;
+    padding-left: 24px;
+
+    color: #fff;
+}
+.checkbox__label::before {
+    content: '';
+    display: inline-block;
     width: 12px;
     height: 12px;
-    border: 1px solid #C283F3;
-}
-.check + span::before {
-    width: 4px;
-    height: 4px;
-    content: url(../img/editions/check.svg);
+    border: 1px solid #fff;
+
     position: absolute;
-    top: -15px;
-    left: 4px;
-    opacity: 0;
-    transition: opacity .2s ease-in-out;
+    top: 4px;
+    left: 0;
 }
-.check:checked + span::before {
-    opacity: 1;
+.checkbox__label::after {
+    content: '';
+    display: none;
+    width: 0;
+    border: 2px solid #C283F3;
+    border-radius: 100px;
+
+    position: absolute;
+    top: 9px;
+    left: 5px;
 }
+.checkbox__input:checked + .checkbox__label::after {
+    display: block;
+}
+.checkbox__input:checked + .checkbox__label::before {
+    border-color: #C283F3;
+}
+.checkbox__input:checked + .checkbox__label {
+    color: #C283F3;
+}
+
+
+
 /* Price */
 .price_title {
     color: #fff;
