@@ -99,7 +99,7 @@
     font-weight: 400;
 }
 .menu-second__item::after {
-    content: url(/img/header/second-arrow.svg);
+    content: url(../img/header/second-arrow.svg);
     padding-left: 4px;
 }
 
