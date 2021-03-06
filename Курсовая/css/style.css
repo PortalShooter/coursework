@@ -44,7 +44,7 @@
 }
 .menu__list {
     display: flex;
-    align-items: center;
+    padding-top: 18px;
     height: 70px ;
 }
 .menu__item {
@@ -83,6 +83,7 @@
 .header__enter:active::before {
     content: url(../img/header/enter-active.svg)
 }
+
 .header__second-bg {
     height: 70px;
     background: rgba(0, 0, 0, 0.4);
@@ -92,17 +93,21 @@
     align-items: center;
 }
 .menu-second__list {
+    position: relative;
     margin-right: auto;
 }
 .menu-second__item {
     margin-right: 90px;
+}
+.second__btn {
+    color: #fff;
+    font-size: 18px;
     font-weight: 400;
 }
-.menu-second__item::after {
+.second__btn::after {
     content: url(../img/header/second-arrow.svg);
     padding-left: 4px;
 }
-
 .header__input {
     width: 218px;
     padding-bottom: 6px;
@@ -112,6 +117,46 @@
 }
 .header__input::placeholder {
     color: #fff;
+}
+
+/* Scrollbar */
+.customScroll {
+    width: 300px;
+    height: 300px;
+    padding: 40px;
+    display: none;
+
+    position: absolute;
+    top: 30px;
+
+    background: rgba(0, 0, 0, 0.4);
+}
+.scroll__list {
+    display: flex;
+    flex-direction: column;
+}
+.scroll__link {
+    display: inline-block;
+    width: 220px;
+    height: 40px;
+    padding: 10px 14px;
+    background-repeat: no-repeat;
+}
+.scroll-active {
+    display: block;
+}
+
+.scroll__item:not(:last-child) {
+    margin-bottom: 20px;
+}
+.item_bg1 {
+    background-image: url(../img/header/header-second/header-second1.jpg);
+}
+.item_bg2 {
+    background-image: url(../img/header/header-second/header-second2.jpg);
+}
+.item_bg3 {
+    background-image: url(../img/header/header-second/header-second3.jpg);
 }
 
 
@@ -393,6 +438,8 @@
     padding-left: 24px;
 
     color: #fff;
+
+    transition: color .15s;
 }
 .checkbox__label::before {
     content: '';
@@ -404,20 +451,25 @@
     position: absolute;
     top: 4px;
     left: 0;
+
+    transition: border-color .15s;
 }
 .checkbox__label::after {
     content: '';
-    display: none;
+    display: block;
     width: 0;
     border: 2px solid #C283F3;
     border-radius: 100px;
+    opacity: 0;
 
     position: absolute;
     top: 9px;
     left: 5px;
+
+    transition: opacity .15s;
 }
 .checkbox__input:checked + .checkbox__label::after {
-    display: block;
+    opacity: 1;
 }
 .checkbox__input:checked + .checkbox__label::before {
     border-color: #C283F3;

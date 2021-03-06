@@ -7,15 +7,19 @@
     <title>Blanchard</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
-
+    <!--Scrollbar -->
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+    <!--Swiper -->
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
-
+    <!-- Map -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+    <!-- Accordion -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
@@ -46,11 +50,86 @@
     <div class="header__second-bg">
         <div class="header__second container">
             <ul class="menu-second__list menu__list">
-              <li class="menu-second__item menu__item">Реализм</li>
-              <li class="menu-second__item menu__item">Импрессионизм</li>
-              <li class="menu-second__item menu__item">Постимпрессионизм</li>
-              <li class="menu-second__item menu__item">Авангард</li>
-              <li class="menu-second__item menu__item">Футуризм</li>
+              <li class="menu-second__item">
+                <button class="second__btn"  onclick="myFunction('#scroll-1')">Реализм</button>
+                <div class="customScroll" id="scroll-1" data-simplebar>
+                  <ul class="scroll__list">
+                    <li class="scroll__item "><a class="scroll__link item_bg1" href="#">Тинторетто</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg2" href="#">Фридрих</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg3" href="#">Леонардо</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg1" href="#">Тинторетто</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg2" href="#">Фридрих</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg3" href="#">Леонардо</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg1" href="#">Тинторетто</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg2" href="#">Фридрих</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg3" href="#">Леонардо</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-second__item">
+                <button class="second__btn" onclick="myFunction('#scroll-2')">Импрессионизм</button>
+                <div class="customScroll" id="scroll-2" data-simplebar>
+                  <ul class="scroll__list">
+                    <li class="scroll__item "><a class="scroll__link item_bg1" href="#">Тинторетто</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg2" href="#">Фридрих</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg3" href="#">Леонардо</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg1" href="#">Тинторетто</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg2" href="#">Фридрих</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg3" href="#">Леонардо</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg1" href="#">Тинторетто</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg2" href="#">Фридрих</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg3" href="#">Леонардо</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-second__item">
+                <button class="second__btn" onclick="myFunction('#scroll-3')">Постимпрессионизм</button>
+                <div class="customScroll" id="scroll-3" data-simplebar>
+                  <ul class="scroll__list">
+                    <li class="scroll__item "><a class="scroll__link item_bg1" href="#">Тинторетто</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg2" href="#">Фридрих</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg3" href="#">Леонардо</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg1" href="#">Тинторетто</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg2" href="#">Фридрих</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg3" href="#">Леонардо</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg1" href="#">Тинторетто</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg2" href="#">Фридрих</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg3" href="#">Леонардо</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-second__item">
+                <button class="second__btn" onclick="myFunction('#scroll-4')">Авангард</button>
+                <div class="customScroll" id="scroll-4" data-simplebar>
+                  <ul class="scroll__list">
+                    <li class="scroll__item "><a class="scroll__link item_bg1" href="#">Тинторетто</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg2" href="#">Фридрих</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg3" href="#">Леонардо</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg1" href="#">Тинторетто</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg2" href="#">Фридрих</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg3" href="#">Леонардо</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg1" href="#">Тинторетто</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg2" href="#">Фридрих</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg3" href="#">Леонардо</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-second__item">
+                <button class="second__btn" onclick="myFunction('#scroll-5')">Футуризм</button>
+                <div class="customScroll" id="scroll-5" data-simplebar>
+                  <ul class="scroll__list">
+                    <li class="scroll__item "><a class="scroll__link item_bg1" href="#">Тинторетто</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg2" href="#">Фридрих</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg3" href="#">Леонардо</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg1" href="#">Тинторетто</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg2" href="#">Фридрих</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg3" href="#">Леонардо</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg1" href="#">Тинторетто</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg2" href="#">Фридрих</a></li>
+                    <li class="scroll__item "><a class="scroll__link item_bg3" href="#">Леонардо</a></li>
+                  </ul>
+                </div>
+              </li>
             </ul>
             <button><img src="img/header/search.svg" alt="Поиск "></button>
             <div class="header__search">
@@ -58,7 +137,12 @@
             </div>
         </div>
     </div>
-
+    <script>
+      function myFunction(x) {
+        let scrollActive = document.querySelector(x);
+        scrollActive.classList.toggle("scroll-active");
+      }
+    </script>
   </header>
 
   <section class="hero">
