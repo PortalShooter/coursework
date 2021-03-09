@@ -35,13 +35,13 @@
           <img class="logo" src="img/header/logo.svg" alt="logo" >
           <nav class="first__menu">
               <ul class="menu__list">
-                  <li class="menu__item"><a class="menu__link" href="#">О нас</a></li>
-                  <li class="menu__item"><a class="menu__link" href="#">Галерея</a></li>
-                  <li class="menu__item"><a class="menu__link" href="#">Каталог</a></li>
-                  <li class="menu__item"><a class="menu__link" href="#">События</a></li>
-                  <li class="menu__item"><a class="menu__link" href="#">Издания</a></li>
-                  <li class="menu__item"><a class="menu__link" href="#">Проекты</a></li>
-                  <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#about">О нас</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#gallery">Галерея</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#catalog">Каталог</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#events">События</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#editions">Издания</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#projects">Проекты</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#contacts">Контакты</a></li>
               </ul>
           </nav>
           <a class="header__enter" href="#">Войти</a>
@@ -51,7 +51,9 @@
         <div class="header__second container">
             <ul class="menu-second__list menu__list">
               <li class="menu-second__item">
-                <button class="second__btn"  onclick="myFunction('#scroll-1')">Реализм</button>
+                <button class="second__btn"  onclick="myFunction(this ,'#scroll-1')">Реализм<svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 5L6 10L0.999998 5" stroke="white"/>
+                  </svg></button>
                 <div class="customScroll" id="scroll-1" data-simplebar>
                   <ul class="scroll__list">
                     <li class="scroll__item "><a class="scroll__link item_bg1" href="#">Тинторетто</a></li>
@@ -67,7 +69,9 @@
                 </div>
               </li>
               <li class="menu-second__item">
-                <button class="second__btn" onclick="myFunction('#scroll-2')">Импрессионизм</button>
+                <button class="second__btn" onclick="myFunction(this ,'#scroll-2')">Импрессионизм<svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 5L6 10L0.999998 5" stroke="white"/>
+                  </svg></button>
                 <div class="customScroll" id="scroll-2" data-simplebar>
                   <ul class="scroll__list">
                     <li class="scroll__item "><a class="scroll__link item_bg1" href="#">Тинторетто</a></li>
@@ -83,7 +87,9 @@
                 </div>
               </li>
               <li class="menu-second__item">
-                <button class="second__btn" onclick="myFunction('#scroll-3')">Постимпрессионизм</button>
+                <button class="second__btn" onclick="myFunction(this ,'#scroll-3')">Постимпрессионизм<svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 5L6 10L0.999998 5" stroke="white"/>
+                  </svg></button>
                 <div class="customScroll" id="scroll-3" data-simplebar>
                   <ul class="scroll__list">
                     <li class="scroll__item "><a class="scroll__link item_bg1" href="#">Тинторетто</a></li>
@@ -99,7 +105,9 @@
                 </div>
               </li>
               <li class="menu-second__item">
-                <button class="second__btn" onclick="myFunction('#scroll-4')">Авангард</button>
+                <button class="second__btn" onclick="myFunction(this ,'#scroll-4')">Авангард<svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 5L6 10L0.999998 5" stroke="white"/>
+                  </svg></button>
                 <div class="customScroll" id="scroll-4" data-simplebar>
                   <ul class="scroll__list">
                     <li class="scroll__item "><a class="scroll__link item_bg1" href="#">Тинторетто</a></li>
@@ -115,7 +123,9 @@
                 </div>
               </li>
               <li class="menu-second__item">
-                <button class="second__btn" onclick="myFunction('#scroll-5')">Футуризм</button>
+                <button class="second__btn" onclick="myFunction(this ,'#scroll-5')">Футуризм<svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 5L6 10L0.999998 5" stroke="white"/>
+                  </svg></button>
                 <div class="customScroll" id="scroll-5" data-simplebar>
                   <ul class="scroll__list">
                     <li class="scroll__item "><a class="scroll__link item_bg1" href="#">Тинторетто</a></li>
@@ -131,15 +141,19 @@
                 </div>
               </li>
             </ul>
-            <button><img src="img/header/search.svg" alt="Поиск "></button>
             <div class="header__search">
+              <button class="search__btn"><svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
+                </svg></button>
               <input class="header__input" type="search" placeholder="Поиск по сайту">
             </div>
         </div>
     </div>
     <script>
-      function myFunction(x) {
-        let scrollActive = document.querySelector(x);
+      function myFunction( x, y) {
+        x.classList.toggle("second__btn_active")
+        let scrollActive = document.querySelector(y);
         scrollActive.classList.toggle("scroll-active");
       }
     </script>
@@ -148,35 +162,39 @@
   <section class="hero">
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        <div class="swiper-slide slide-1"></div>
-        <div class="swiper-slide slide-2"></div>
-        <div class="swiper-slide slide-3"></div>
+        <div class="swiper-slide slide-1"><img class="hero__img" src="img/hero/hero-1xxl.webp" alt=""></div>
+        <div class="swiper-slide slide-2"><img class="hero__img" src="img/hero/hero-2xxl.webp" alt=""></div>
+        <div class="swiper-slide slide-3"><img class="hero__img" src="img/hero/hero-3xxl.webp" alt=""></div>
       </div>
     </div>
     <div class="hero__content container">
       <h1 class="hero__title">Прикоснитесь к прекрасному</h1>
       <p class="hero__desc">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
-      <button class="hero__btn btn">Подписаться на рассылку</button>
+      <a href="#contacts" class="hero__btn btn">Подписаться на рассылку</a>
     </div>
   </section>
 
+  <a id="about"></a>
   <section class="about container">
+
     <h2 class="about__title h2">О нас</h2>
     <p class="about__desc">Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны быть разоблачены.</p>
   </section>
+
+  <a id="gallery"></a>
   <section class="gallery">
     <div class="gallery__content container">
       <h2 class="gallery__title h2">Галерея</h2>
       <div class="gallery__flex">
         <div class="gallery__filter">
           <span class="filter__title">Фильтровать по:</span>
-          <select class="gallery__select" name="author" id="">
+          <select class="gallery__select" name="author">
             <option value="">Автор</option>
           </select>
-          <select class="gallery__select" name="author" id="">
+          <select class="gallery__select" name="author">
             <option value="">Направление</option>
           </select>
-          <select class="gallery__select" name="author" id="">
+          <select class="gallery__select" name="author">
             <option value="">Техника</option>
           </select>
           <p class="gallery__desc">Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a class="link__transition" href="#">авторизуйтесь,</a> либо воспользуйтесь лицензией. </p>
@@ -193,6 +211,7 @@
     </div>
   </section>
 
+  <a id="catalog"></a>
   <section class="catalog container ">
     <div class="row">
       <h2 class="catalog__title h2">Каталог</h2>
@@ -393,6 +412,7 @@
     </div>
   </section>
 
+  <a id="events"></a>
   <section class="events container">
     <h2 class="events_title h2">События</h2>
     <div class="events__cards">
@@ -432,6 +452,7 @@
     <button class="event__btn btn">Все события </button>
   </section>
 
+  <a id="editions"></a>
   <section class="editions">
     <div class="container">
       <h2 class="editions__title h2">Издания</h2>
@@ -520,6 +541,7 @@
     </div>
   </section>
 
+  <a id="projects"></a>
   <section class="projects container">
     <h2 class="projects__title h2">Проекты</h2>
     <p class="projects__desc">Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде всего, постоянное информационно-пропагандистское <span class="marker"><span class="popup popup1">Пример современных тенденций - современная методология разработки </span><img class="marker__img" src="img/projects/marker1.svg" alt="marker"></span> обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей оппозиции могут быть рассмотрены <span class="marker"><span class="popup popup2">Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции</span><img class="marker__img" src="img/projects/marker1.svg" alt="marker"></span> исключительно в разрезе маркетинговых и финансовых <span class="marker"><span class="popup popup3">В стремлении повысить качество</span><img class="marker__img" src="img/projects/marker1.svg" alt="marker"></span> предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости. Подробнее: <a class="link__transition" href="blanchard-art.ru/projects/about">blanchard-art.ru/projects/about</a></p>
@@ -531,6 +553,7 @@
     </div>
   </section>
 
+  <a id="contacts"></a>
   <section class="contacts">
     <h2 class="contacts__title h2 container">Контакты</h2>
     <div class="flex">
@@ -548,7 +571,7 @@
         </div>
       </div>
       <div id="map" style="width: 1238px; height: 682px"></div>
-      <script src="h://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+      <script type="text/javascript">
       </script>
 
       <script type="text/javascript">
@@ -587,7 +610,7 @@
   // Optional parameters
   loop: true,
   autoplay: {
-   delay: 5000,
+   delay: 10000,
  },
 
   // If we need pagination
@@ -608,7 +631,7 @@
 },
 );
 
-swiper.slideNext ( 2000, true)
+// swiper.slideNext ( 2000, true)
 
 </script>
 </body>
