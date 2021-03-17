@@ -17,12 +17,12 @@ const swiper = new Swiper('.swiper-container', {
     slidesPerColumn: 2,
     simulateTouch: false,
     pagination: {
-      el: '.swiper-pagination-2',
+      el: '.swiper-pagination-1',
       type: 'fraction',
     },
     navigation: {
-      nextEl: '.swiper-button-next-2',
-      prevEl: '.swiper-button-prev-2',
+      nextEl: '.swiper-button-next-1',
+      prevEl: '.swiper-button-prev-1',
     },
   },
   );
@@ -34,12 +34,12 @@ const swiper = new Swiper('.swiper-container', {
     slidesPerGroup: 3,
     simulateTouch: false,
     pagination: {
-      el: '.swiper-pagination-2',
+      el: '.swiper-pagination-1',
       type: 'fraction',
     },
     navigation: {
-      nextEl: '.swiper-button-next-2',
-      prevEl: '.swiper-button-prev-2',
+      nextEl: '.swiper-button-next-1',
+      prevEl: '.swiper-button-prev-1',
     },
   },
   );
@@ -51,8 +51,8 @@ const swiper = new Swiper('.swiper-container', {
     slidesPerGroup: 3,
     simulateTouch: false,
     navigation: {
-      nextEl: '.swiper-button-next-projects',
-      prevEl: '.swiper-button-prev-projects',
+      nextEl: '.swiper-button-next-1',
+      prevEl: '.swiper-button-prev-1',
     },
   },
   );
