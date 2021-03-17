@@ -1,10 +1,18 @@
 'use strict'
 // Header btn
-function myFunction( x, y) {
-x.classList.toggle("second__btn_active")
-let scrollActive = document.querySelector(y);
-scrollActive.classList.toggle("scroll-active");
-}
+let btn = document.querySelectorAll('.second__btn')
+  btn.forEach(el => {
+    el.addEventListener('click', myFunction)
+    function myFunction() {
+      let active = document.getElementById(el.name)
+      console.log(el.name)
+
+      el.classList.toggle("second__btn_active")
+      active.classList.toggle("scroll-active")
+    }
+  })
+
+
 
 
 // Accordion
