@@ -438,13 +438,18 @@ section {
     background: transparent;
     border: 1px solid #FFFFFF;
     border-radius: 6px;
+    opacity: .7;
 }
 .choices__item {
     font-size: 16px;
 }
+.choices__list--dropdown .choices__item {
+    font-size: 16px;
+    border-bottom: 1px solid #fff;;
+}
 .choices__list--dropdown .choices__item--selectable.is-highlighted {
     background-color: #000;
-    opacity: 0.65;
+    opacity: .7;
 }
 
 .gallery__desc {
@@ -634,6 +639,10 @@ section {
     color: #7943A4;
     border-color: #7943A4;
 }
+.ui-accordion-content {
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
 
 .accordion__title:hover > .accordion__btn {
     background: #9D5CD0;
@@ -652,9 +661,6 @@ section {
     font-weight: 600;
     font-size: 24px;
     padding-left: 4px;
-}
-.accordion__content {
-    margin: 25px 0 30px 0;
 }
 .accordion__flex {
     display: flex;
