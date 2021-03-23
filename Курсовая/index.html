@@ -7,7 +7,7 @@
     <title>Blanchard</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <!--Scrollbar -->
     <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
@@ -15,12 +15,14 @@
     <!--Swiper -->
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
     <!-- Map -->
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
     <!-- Accordion -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- Select -->
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"/>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -175,21 +177,11 @@
       <h2 class="gallery__title h2">Галерея</h2>
       <div class="gallery__filter">
         <span class="filter__title">Фильтровать по:</span>
-        <div class="gallery__select__block">
-          <select class="gallery__select" name="author">
-            <option value="">Автор</option>
-          </select>
-        </div>
-        <div class="gallery__select__block">
-          <select class="gallery__select" name="direction">
-            <option value="">Направление</option>
-          </select>
-        </div>
-        <div class="gallery__select__block">
-          <select class="gallery__select" name="equipment">
-            <option value="">Техника</option>
-          </select>
-        </div>
+        <select class="gallery__select">
+          <option value="">Автор</option>
+          <option value="">Направление</option>
+          <option value="">Техника</option>
+        </select>
       </div>
       <p class="gallery__desc">Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a class="link__transition" href="#">авторизуйтесь,</a> либо воспользуйтесь лицензией. </p>
       <div class="swiper-container__btn">
@@ -694,7 +686,7 @@
         <div class="connect__title">Шоурум №4</div>
         <div class="connect__adds">Леонтьевский переулок, дом 5, строение 1</div>
         <div class="connect__call">Заказать обратный звонок</div>
-        <input class="connect__input" type="name" placeholder="Имя*">
+        <input class="connect__input" type="text" placeholder="Имя*">
         <input class="connect__input" type="tel" placeholder="Телефон*">
         <button class="connect__btn btn">Заказать</button>
         <div class="connect__one-click">Связаться в один клик</div>

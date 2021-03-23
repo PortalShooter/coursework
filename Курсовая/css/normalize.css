@@ -350,15 +350,16 @@
 
 * {
   box-sizing: border-box;
-  font-weight: 400;
 }
 body {
   font-size: 16px;
   font-family: 'Open Sans';
   line-height: 32px;
+  font-weight: 400;
 }
 a {
   text-decoration: none;
+  font-weight: 400;
   color: #fff;
 }
 ul {
@@ -374,9 +375,11 @@ button {
   padding: 0;
 }
 h1,h2,h3 {
+  font-weight: 400;
   margin: 0;
   margin-left: -4px;
 }
 p {
+  font-weight: 400;
   margin: 0;
 }
