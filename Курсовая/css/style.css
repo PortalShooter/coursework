@@ -66,13 +66,13 @@ section {
 }
 
 /* Header */
-.header__first_bg {
+.header__first-bg {
   background: #000000;
 }
 .first {
   display: flex;
   align-items: center;
-  height: 100px;
+  padding: 30px 0;
 }
 .logo {
   margin-right: 11.2%;
@@ -87,6 +87,7 @@ section {
 }
 .menu__link {
   transition: color .15s;
+  font-weight: 600;
 }
 .menu__link:hover {
   color: #C283F3;
@@ -144,7 +145,6 @@ section {
 .second__btn {
   color: #fff;
   font-size: 18px;
-  font-weight: 400;
   transition: color .15s;
 }
 .second__btn:hover {
@@ -207,7 +207,7 @@ section {
 /* Scrollbar */
 .customScroll {
   width: 300px;
-  height: 300px;
+  max-height: 300px;
   padding: 40px;
   display: none;
 
@@ -266,21 +266,6 @@ section {
 }
 .simplebar-scrollbar.simplebar-visible::before {
   opacity: 1;
-}
-#scroll-1 {
-  left: -8%;
-}
-#scroll-2 {
-  left: 11%;
-}
-#scroll-3 {
-  left: 35%;
-}
-#scroll-4 {
-  left: 58%;
-}
-#scroll-5 {
-  left: 77%;
 }
 
 .scroll-active {
@@ -1096,4 +1081,23 @@ transition: opacity .15s;
 }
 .footer__link:not(:last-child) {
   margin-right: 12px;
+}
+@media (max-width: 1024px) {
+  .container {
+    width: 924px;
+  }
+  .burger {
+    width: 40px;
+    height: 40px;
+  }
+  .burger__line {
+    width: 100%;
+  }
+  .burger::after,
+  .burger::before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fff;
+  }
 }

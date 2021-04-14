@@ -3,18 +3,51 @@
 let btn = document.querySelectorAll('.second__btn')
   btn.forEach(el => {
     el.addEventListener('click', myFunction)
+    let active = document.getElementById(el.name)
     function myFunction() {
-      let active = document.getElementById(el.name)
-      console.log(el.name)
-
       el.classList.toggle("second__btn_active")
       active.classList.toggle("scroll-active")
+
+      window.onclick = function(event) {
+        if (!event.target.matches('.second__btn')) {
+
+          var dropdowns = document.getElementsByClassName("customScroll");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('scroll-active')) {
+              openDropdown.classList.remove('scroll-active');
+              el.classList.remove('second__btn_active');
+            }
+          }
+        }
+      }
     }
   })
 
 
 
+// Скролл
+const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
+if(menuLinks.length > 0) {
+  menuLinks.forEach(menuLink => {
+    menuLink.addEventListener('click', onMenuLinkClick);
+  });
 
+  function onMenuLinkClick(e) {
+    const menuLink = e.target;
+    if(menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+      const gotoBlock = document.querySelector(menuLink.dataset.goto);
+      const gotoBlockValue = gotoBlock.getBoundingClientRect().top;
+
+      window.scrollTo({
+        top: gotoBlockValue,
+        behavior: 'smooth'
+      })
+      e.preventDefault();
+    }
+  }
+}
 // Accordion
 $( function() {
 $( "#accordion" ).accordion();
