@@ -5,9 +5,18 @@ let btn = document.querySelectorAll('.second__btn')
     el.addEventListener('click', myFunction)
     let active = document.getElementById(el.name)
     function myFunction() {
-      el.classList.toggle("second__btn_active")
-      active.classList.toggle("scroll-active")
-
+      if(el.matches('.second__btn_active')){
+        el.classList.remove('second__btn_active')
+        active.classList.remove("scroll-active")
+      } else{
+        btn.forEach(el1 => {
+          let active = document.getElementById(el1.name)
+          el1.classList.remove('second__btn_active')
+          active.classList.remove("scroll-active")
+        })
+        el.classList.toggle("second__btn_active")
+        active.classList.toggle("scroll-active")
+      }
       window.onclick = function(event) {
         if (!event.target.matches('.second__btn')) {
 

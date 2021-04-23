@@ -6,8 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blanchard</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"> -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <!--Scrollbar -->
   <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
@@ -50,7 +48,7 @@
     </div>
     <div class="header__second-bg">
       <div class="second container">
-        <ul class="second__list menu__list">
+        <ul class="second__list menu menu__list">
           <li class="second__item">
             <button class="second__btn" name="scroll-1">Реализм<svg width="12" height="11" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -182,7 +180,7 @@
       <div class="gallery__filter">
         <span class="filter__title">Фильтровать по:</span>
         <select class="gallery__select">
-          <option value="">Автор</option>
+          <option value="" hidden>Автор</option>
           <option value="">Направление</option>
           <option value="">Техника</option>
         </select>
@@ -192,7 +190,7 @@
       <div class="swiper-container__btn">
         <div class="swiper__nav">
           <div class="swiper-button-prev-1"></div>
-          <div class="swiper-pagination-1"></div>
+          <span class="swiper-pagination-1"></span>
           <div class="swiper-button-next-1"></div>
         </div>
         <div class="swiper-wrapper">
@@ -583,7 +581,7 @@
         <div class="swiper-container__editions">
           <div class="swiper__nav">
             <div class="swiper-button-prev-1"></div>
-            <div class="swiper-pagination-1"></div>
+            <span class="swiper-pagination-1"></span>
             <div class="swiper-button-next-1"></div>
           </div>
           <div class="swiper-wrapper">
