@@ -76,6 +76,7 @@ section {
   padding: 30px 0;
 }
 .logo {
+  padding-left: 5px;
   margin-right: 11.2%;
 }
 .menu__list {
@@ -556,7 +557,7 @@ transition: opacity .15s;
 }
 /* Catalog */
 .catalog {
-  padding-top: 100px;
+  padding-top: 98px;
 }
 .catalog__row {
   display: flex;
@@ -725,7 +726,7 @@ transition: opacity .15s;
 }
 /* Events */
 .events {
-  padding-top: 95px;
+  padding-top: 98px;
   padding-bottom: 81px;
 }
 .events__cards {
@@ -757,6 +758,7 @@ transition: opacity .15s;
 }
 .card-events__title {
   margin-bottom: 4px;
+  padding-left: 5px;
   font-weight: 600;
   font-size: 24px;
   line-height: 33px;
@@ -918,7 +920,7 @@ transition: opacity .15s;
 }
 /* Projects */
 .projects {
-  padding-top: 95px;
+  padding-top: 97px;
 }
 .projects__desc {
   width: 1080px;
@@ -1100,9 +1102,15 @@ transition: opacity .15s;
 .footer {
   background: #000;
 }
+.footer__logo {
+  padding-left: 5px;
+}
+.footer__icon {
+  padding-right: 5px;
+}
 .footer__content {
   display: flex;
-  padding: 50px 0 44px 0;
+  padding: 50px 0 34px 0;
   justify-content: space-between;
 }
 .footer__link:not(:last-child) {
