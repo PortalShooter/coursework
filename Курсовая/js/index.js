@@ -19,10 +19,8 @@ let btn = document.querySelectorAll('.second__btn')
       }
       window.onclick = function(event) {
         if (!event.target.matches('.second__btn')) {
-
           var dropdowns = document.getElementsByClassName("customScroll");
-          var i;
-          for (i = 0; i < dropdowns.length; i++) {
+          for (let i = 0; i < dropdowns.length; i++) {
             var openDropdown = dropdowns[i];
             if (openDropdown.classList.contains('scroll-active')) {
               openDropdown.classList.remove('scroll-active');

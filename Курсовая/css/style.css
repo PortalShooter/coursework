@@ -28,7 +28,8 @@ html {
   margin-bottom: 31px;
 }
 .container {
-  width: 1600px;
+  width: 1612px;
+  padding: 0 6px;
   margin: 0 auto;
 }
 section {
@@ -305,6 +306,7 @@ section {
   z-index: -1;
 }
 .hero__img {
+  height: 800px;
   object-fit: fill;
   animation: hero-ripple 5s infinite linear alternate;
 }
@@ -355,6 +357,7 @@ section {
 }
 /* About */
 .about {
+  padding-top: 95px;
   padding-bottom: 71px;
 }
 .about__desc {
@@ -552,6 +555,9 @@ transition: opacity .15s;
   left: 8px;
 }
 /* Catalog */
+.catalog {
+  padding-top: 100px;
+}
 .catalog__row {
   display: flex;
 }
@@ -719,6 +725,7 @@ transition: opacity .15s;
 }
 /* Events */
 .events {
+  padding-top: 95px;
   padding-bottom: 81px;
 }
 .events__cards {
@@ -910,6 +917,9 @@ transition: opacity .15s;
   background: rgba(157, 92, 208, 0.5);
 }
 /* Projects */
+.projects {
+  padding-top: 95px;
+}
 .projects__desc {
   width: 1080px;
   margin-bottom: 21px;
