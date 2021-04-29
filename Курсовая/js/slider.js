@@ -11,8 +11,8 @@ const swiper = new Swiper('.swiper-container', {
 
   const swiperBtn = new Swiper('.swiper-container__btn', {
     speed: 1000,
-    spaceBetween: 50,
-    slidesPerView: 3,
+    spaceBetween: 34,
+    slidesPerView: 1,
     slidesPerGroup: 3,
     slidesPerColumn: 2,
     simulateTouch: false,
@@ -24,6 +24,15 @@ const swiper = new Swiper('.swiper-container', {
       nextEl: '.swiper-button-next-1',
       prevEl: '.swiper-button-prev-1',
     },
+    breakpoints: {
+      1025: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+      769: {
+        slidesPerView: 2,
+      }
+    }
   },
   );
 

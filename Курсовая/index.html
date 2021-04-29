@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <title>Blanchard</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -26,12 +26,12 @@
 </head>
 <body>
   <header class="header">
-    <div class="header__first-bg">
+    <div class="header__first_bg">
       <div class="first container">
         <img class="logo" src="img/header/logo.svg" alt="logo">
         <nav class="first__menu menu">
           <ul class="menu__list">
-            <li class="menu__item"><a class="menu__link" data-goto=".about" href="#">О нас</a></li>
+            <li class="menu__item"><a class="menu__link" data-goto=".about" href="#">О&nbspнас</a></li>
             <li class="menu__item"><a class="menu__link" data-goto=".gallery" href="#">Галерея</a></li>
             <li class="menu__item"><a class="menu__link" data-goto=".catalog" href="#">Каталог</a></li>
             <li class="menu__item"><a class="menu__link" data-goto=".events" href="#">События</a></li>
@@ -40,13 +40,34 @@
             <li class="menu__item"><a class="menu__link" data-goto=".contacts" href="#">Контакты</a></li>
           </ul>
         </nav>
+
         <a class="header__enter" href="#">Войти</a>
-        <div class="burger">
+
+        <button class="burger">
           <span class="burger__line"></span>
-        </div>
+        </button>
+
+        <button class="search__btn search__btn_open"><svg width="23" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="6.8678" height="1.71695"
+            transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
+            fill="white" />
+        </svg></button>
+
+        <form class="first__search search">
+          <button class="search__btn"><svg width="23" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="6.8678" height="1.71695"
+                transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
+                fill="white" />
+            </svg></button>
+          <input class="search__input hide" type="search" placeholder="Поиск по сайту">
+        </form>
       </div>
     </div>
-    <div class="header__second-bg">
+    <div class="header__second_bg">
       <div class="second container">
         <ul class="second__list menu menu__list">
           <li class="second__item">
@@ -337,20 +358,16 @@
                 <li class="accordion__item"><a href="#" class="accordion__link">Брамантино</a></li>
                 <li class="accordion__item"><a href="#" class="accordion__link">Бреа, Людовико</a></li>
                 <li class="accordion__item"><a href="#" class="accordion__link">Бьяджо д’Антонио Туччи</a></li>
-              </ul>
-              <ul class="accordion__list">
                 <li class="accordion__item"><a href="#" class="accordion__link">Веккьетта</a></li>
                 <li class="accordion__item"><a href="#" class="accordion__link">Андреа Верроккьо</a></li>
                 <li class="accordion__item"><a href="#" class="accordion__link accordion__active">Доменико
-                    Гирландайо</a></li>
+                  Гирландайо</a></li>
                 <li class="accordion__item"><a href="#" class="accordion__link">Беноццо Гоццоли</a></li>
                 <li class="accordion__item"><a href="#" class="accordion__link">Граначчи, Франческо</a></li>
                 <li class="accordion__item"><a href="#" class="accordion__link">Грегорио ди Чекко</a></li>
                 <li class="accordion__item"><a href="#" class="accordion__link">Джованни да Удине</a></li>
                 <li class="accordion__item"><a href="#" class="accordion__link">Джованни ди Паоло</a></li>
                 <li class="accordion__item"><a href="#" class="accordion__link">Джорджоне</a></li>
-              </ul>
-              <ul class="accordion__list">
                 <li class="accordion__item"><a href="#" class="accordion__link">Парентино, Бернардо</a></li>
                 <li class="accordion__item"><a href="#" class="accordion__link">Пезеллино</a></li>
                 <li class="accordion__item"><a href="#" class="accordion__link">Пьетро Перуджино</a></li>

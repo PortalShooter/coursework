@@ -78,3 +78,16 @@ myMap.geoObjects.add(myPlacemark);
 // Select
   const element = document.querySelector('.gallery__select');
   const choices = new Choices(element,{searchEnabled: false,itemSelectText: '',shouldSort: false});
+
+// burger
+let burgerBtn = document.querySelector('.burger')
+let menu = document.querySelector('.menu__list')
+let enter = document.querySelector('.header__enter')
+if(burgerBtn){
+    burgerBtn.addEventListener('click', function() {
+        document.body.classList.toggle('_lock')
+        burgerBtn.classList.toggle('_active')
+        menu.classList.toggle('_active')
+        enter.classList.toggle('_active')
+    })
+}
