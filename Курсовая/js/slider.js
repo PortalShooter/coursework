@@ -50,12 +50,21 @@ const swiper = new Swiper('.swiper-container', {
       nextEl: '.swiper-button-next-1',
       prevEl: '.swiper-button-prev-1',
     },
+    breakpoints: {
+      1025: {
+        slidesPerView: 3,
+      },
+      769: {
+        slidesPerView: 2,
+        spaceBetween: 50,
+      }
+    }
   },
   );
 
   const swiperProjects = new Swiper('.swiper-container__projects', {
     speed: 1000,
-    spaceBetween: 50,
+    spaceBetween: 34,
     slidesPerView: 3,
     slidesPerGroup: 3,
     simulateTouch: false,
@@ -63,5 +72,14 @@ const swiper = new Swiper('.swiper-container', {
       nextEl: '.swiper-button-next-1',
       prevEl: '.swiper-button-prev-1',
     },
+    breakpoints: {
+      1025: {
+        slidesPerView: 3,
+      },
+      769: {
+        slidesPerView: 2,
+        spaceBetween: 50,
+      }
+    }
   },
   );

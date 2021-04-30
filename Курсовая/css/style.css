@@ -782,7 +782,6 @@ section {
   color: #333333;
 }
 .card-events__description {
-  width: 400px;
   margin-bottom: auto;
 }
 .card-events__details {
@@ -887,13 +886,14 @@ section {
   margin-top: 16px;
 }
 .slide-img__editions {
+  width: 100%;
   height: 390px;
   margin-bottom: 15px;
 }
 .card-editions__desc {
   display: flex;
   flex-wrap: wrap;
-  width: 350px;
+  width: 100%;
 }
 .card-editions__name,
 .card-editions__author,
@@ -1240,7 +1240,7 @@ section {
     font-size: 24px;
   }
 
-  .header__second-bg {
+  .header__second_bg {
     display: none;
   }
 
@@ -1251,8 +1251,6 @@ section {
     width: 30px;
     height: 30px;
   }
-
-
 
   .hero {
     padding-top: 110px;
@@ -1273,15 +1271,15 @@ section {
     padding-top: 89px;
   }
   .about__desc,
-  .catalog__desc {
+  .catalog__desc,
+  .projects__desc {
     width: auto;
   }
   .gallery,
   .gallery__content {
     height: 839px;
   }
-  .swiper-container__btn,
-  .swiper-container__editions {
+  .swiper-container__btn {
     width: 594px;
   }
   .slide-img {
@@ -1305,5 +1303,71 @@ section {
   .left__img {
     width: 100%;
   }
+  .events__cards {
+    margin: 0 -13.5px 52px -13.5px;
+  }
+  .card-events {
+    padding: 0 13.5px;
+  }
+  .card-events__content {
+    min-height: 483px;
+  }
+  .card__img {
+    height: 200px;
+  }
+  .card-events__content {
+    padding: 12px 15px 50px 35px;
+  }
+  .card-events__description {
+    padding-right: 15px;
+  }
+  .swiper-container__editions {
+    width: 630px;
+  }
+  .slide-img__editions {
+    height: 320px;
+  }
+  .card-editions {
+    width: 290px;
+  }
+  .editions__content,
+  .editions {
+    height: 763px;
+  }
+  .slide-img__editions {
+    margin-bottom: 4px;
+  }
+
+  .swiper-container__projects {
+    width: 818px
+  }
+  .slide {
+    height: 126px;
+  }
+  .projects__btn .swiper-button-prev-1,
+  .projects__btn .swiper-button-next-1 {
+    top: 48px;
+  }
+
+  .connect {
+    padding: 124px 100px 104px 50px;
+  }
+  .connect__input {
+    width: 335px;
+  }
+  .connect__link img,
+  .footer__link img {
+    width: 60px;
+    height: 60px;
+  }
+  .connect__link:not(:last-child),
+  .footer__link:not(:last-child) {
+    margin-right: 25px;
+  }
+  .footer__icon {
+    margin-top: -9px;
+    padding: 0;
+  }
+
 
 }
