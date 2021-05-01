@@ -47,7 +47,7 @@
           <span class="burger__line"></span>
         </button>
 
-        <button class="search__btn search__btn_open"><svg width="23" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <button class="search__btn search__btn_open"><svg width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="6.8678" height="1.71695"
             transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
           <path fill-rule="evenodd" clip-rule="evenodd"
@@ -172,9 +172,30 @@
   <section class="hero">
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        <div class="swiper-slide slide-1"><img class="hero__img" src="img/hero/hero-1xxl.webp" alt=""></div>
-        <div class="swiper-slide slide-2"><img class="hero__img" src="img/hero/hero-2xxl.webp" alt=""></div>
-        <div class="swiper-slide slide-3"><img class="hero__img" src="img/hero/hero-3xxl.webp" alt=""></div>
+        <div class="swiper-slide slide-1">
+          <picture class="hero__img">
+            <source srcset="img/hero/hero-1s.jpg" media="(max-width: 320px)">
+            <source srcset="img/hero/hero-1m.jpg" media="(max-width: 768px)">
+            <source srcset="img/hero/hero-1l.jpg" media="(max-width: 1024px)">
+            <img class="animation-hero"  src="img/hero/hero-1xxl.webp" alt="">
+          </picture>
+        </div>
+        <div class="swiper-slide slide-2">
+          <picture class="hero__img">
+            <source srcset="img/hero/hero-2s.jpg" media="(max-width: 320px)">
+            <source srcset="img/hero/hero-2m.jpg" media="(max-width: 768px)">
+            <source srcset="img/hero/hero-2l.jpg" media="(max-width: 1024px)">
+            <img  src="img/hero/hero-2xxl.webp" alt="">
+          </picture>
+        </div>
+        <div class="swiper-slide slide-3">
+          <picture class="hero__img">
+            <source srcset="img/hero/hero-3s.jpg" media="(max-width: 320px)">
+            <source srcset="img/hero/hero-3m.jpg" media="(max-width: 768px)">
+            <source srcset="img/hero/hero-3l.jpg" media="(max-width: 1024px)">
+            <img  src="img/hero/hero-3xxl.webp" alt="">
+          </picture>
+        </div>
       </div>
     </div>
     <div class="hero__content container">
@@ -197,17 +218,18 @@
   </section>
   <section class="gallery">
     <div class="gallery__content container">
-      <h2 class="gallery__title h2">Галерея</h2>
       <div class="gallery__filter">
+        <h2 class="gallery__title h2">Галерея</h2>
         <span class="filter__title">Фильтровать по:</span>
         <select class="gallery__select">
           <option value="" hidden>Автор</option>
           <option value="">Направление</option>
           <option value="">Техника</option>
         </select>
-      </div>
-      <p class="gallery__desc">Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a
+        <p class="gallery__desc">Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a
           class="link__transition" href="#">авторизуйтесь,</a> либо воспользуйтесь лицензией. </p>
+      </div>
+
       <div class="swiper-container__btn">
         <div class="swiper__nav">
           <div class="swiper-button-prev-1"></div>
@@ -309,6 +331,9 @@
           </div>
         </div>
       </div>
+
+      <p class="gallery__desc _adaptive">Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a
+        class="link__transition" href="#">авторизуйтесь,</a> либо воспользуйтесь лицензией. </p>
     </div>
   </section>
   <section class="catalog container ">
@@ -560,8 +585,8 @@
       <div class="editions__content">
         <div class="editions__ledt-column">
           <h2 class="editions__title h2">Издания</h2>
+          <h3 class="checkbox__title">Категории</h3>
           <div class="checkbox checkbox__list">
-            <h3 class="checkbox__title">Категории</h3>
             <div class="checkbox__item">
               <input class="checkbox__input" id="check-1" type="checkbox" checked>
               <label class="checkbox__label" for="check-1">Бестселлеры</label>

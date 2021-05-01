@@ -31,9 +31,18 @@ let btn = document.querySelectorAll('.second__btn')
       }
     }
   })
-
-
-
+// burger
+let burgerBtn = document.querySelector('.burger')
+let menu = document.querySelector('.menu__list')
+let enter = document.querySelector('.header__enter')
+if(burgerBtn){
+    burgerBtn.addEventListener('click', function() {
+        document.body.classList.toggle('_lock')
+        burgerBtn.classList.toggle('_active')
+        menu.classList.toggle('_active')
+        enter.classList.toggle('_active')
+    })
+}
 // Скролл
 const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
 if(menuLinks.length > 0) {
@@ -47,6 +56,13 @@ if(menuLinks.length > 0) {
       const gotoBlock = document.querySelector(menuLink.dataset.goto);
       const gotoBlockValue = gotoBlock.getBoundingClientRect().top;
 
+      if(burgerBtn.classList.contains('_active')) {
+        document.body.classList.remove('_lock')
+        burgerBtn.classList.remove('_active')
+        menu.classList.remove('_active')
+        enter.classList.remove('_active')
+      }
+
       window.scrollTo({
         top: gotoBlockValue,
         behavior: 'smooth'
@@ -57,8 +73,10 @@ if(menuLinks.length > 0) {
 }
 // Accordion
 $( function() {
-$( "#accordion" ).accordion();
-} );
+$( "#accordion" ).accordion({
+  heightStyle: "content",
+});
+});
 
 // Map
 ymaps.ready(init);
@@ -79,15 +97,3 @@ myMap.geoObjects.add(myPlacemark);
   const element = document.querySelector('.gallery__select');
   const choices = new Choices(element,{searchEnabled: false,itemSelectText: '',shouldSort: false});
 
-// burger
-let burgerBtn = document.querySelector('.burger')
-let menu = document.querySelector('.menu__list')
-let enter = document.querySelector('.header__enter')
-if(burgerBtn){
-    burgerBtn.addEventListener('click', function() {
-        document.body.classList.toggle('_lock')
-        burgerBtn.classList.toggle('_active')
-        menu.classList.toggle('_active')
-        enter.classList.toggle('_active')
-    })
-}

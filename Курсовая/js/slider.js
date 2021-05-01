@@ -29,7 +29,7 @@ const swiper = new Swiper('.swiper-container', {
         slidesPerView: 3,
         spaceBetween: 50,
       },
-      769: {
+      321: {
         slidesPerView: 2,
       }
     }
@@ -38,7 +38,7 @@ const swiper = new Swiper('.swiper-container', {
 
   const swiperEditions = new Swiper('.swiper-container__editions', {
     speed: 1000,
-    spaceBetween: 50,
+    spaceBetween: 34,
     slidesPerView: 3,
     slidesPerGroup: 3,
     simulateTouch: false,
@@ -54,9 +54,11 @@ const swiper = new Swiper('.swiper-container', {
       1025: {
         slidesPerView: 3,
       },
-      769: {
-        slidesPerView: 2,
+      789: {
         spaceBetween: 50,
+      },
+      321: {
+        slidesPerView: 2,
       }
     }
   },
@@ -76,8 +78,9 @@ const swiper = new Swiper('.swiper-container', {
       1025: {
         slidesPerView: 3,
       },
-      769: {
+      321: {
         slidesPerView: 2,
+        slidesPerGroup: 2,
         spaceBetween: 50,
       }
     }
