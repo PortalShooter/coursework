@@ -13,8 +13,8 @@ const swiper = new Swiper('.swiper-container', {
     speed: 1000,
     spaceBetween: 34,
     slidesPerView: 1,
-    slidesPerGroup: 3,
-    slidesPerColumn: 2,
+    slidesPerGroup: 1,
+    slidesPerColumn: 1,
     simulateTouch: false,
     pagination: {
       el: '.swiper-pagination-1',
@@ -28,9 +28,13 @@ const swiper = new Swiper('.swiper-container', {
       1025: {
         slidesPerView: 3,
         spaceBetween: 50,
+        slidesPerColumn: 2,
+        slidesPerGroup: 3,
       },
       321: {
         slidesPerView: 2,
+        slidesPerColumn: 2,
+        slidesPerGroup: 3,
       }
     }
   },

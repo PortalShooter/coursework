@@ -82,10 +82,9 @@ section {
   display: flex;
   width: 100%;
   align-items: center;
-  padding: 30px 10px 30px 5px;
+  padding: 30px 10px 30px 13px;
 }
 .logo {
-  padding-left: 5px;
   margin-right: 11.2%;
 }
 .menu__list {
@@ -610,8 +609,9 @@ section {
   left: -12px;
   border: 2px solid #9D5CD0;
 }
-.language__btn {
-  height: inherit;
+.language__btn img {
+  height: 100%;
+  width: 100%;
 }
 .catalog__desc {
   width: 1080px;
@@ -751,10 +751,17 @@ section {
 }
 .events__cards {
   display: flex;
-  margin: 0 -25px 52px -25px;
+  flex-wrap: wrap;
+  margin: 0 -25px;
+  overflow: hidden;
+  height: 752px;
+}
+.events__cards.open {
+  height: 1504px;
 }
 .card-events {
   padding: 0 25px;
+  margin-bottom: 55px;
   flex: 1 1 33.33333%;
 }
 .card__img {
@@ -907,6 +914,7 @@ section {
 .card-editions__author,
 .card-editions__btn,
 .card-editions__cost {
+  padding-right: 3px;
   color: #fff;
   line-height: 22px;
 }
@@ -1159,7 +1167,6 @@ section {
   }
   .burger {
     position: relative;
-    margin-left: 7px;
     display: block;
     width: 36px;
     height: 28px;
@@ -1173,8 +1180,8 @@ section {
   .burger::before,
   .burger__line {
     position: absolute;
-    left: -6px;
-    height: 4px;
+    left: -3px;
+    height: 12%;
     background: #fff;
     transition: transform .3s;
   }
@@ -1457,9 +1464,6 @@ section {
   .events {
     padding-top: 85px;
   }
-  .card-events:nth-child(3) {
-    display: none;
-  }
   .card-events__content {
     padding: 14px 18px 47px 35px;
   }
@@ -1494,5 +1498,171 @@ section {
   }
   .swiper-container__projects {
     width: 562px;
+  }
+}
+@media(max-width: 320px){
+  body {
+    font-size: 14px;
+  }
+  .container {
+    width: 310px;
+  }
+  .first {
+    height: 45px;
+    padding: 10px 13px;
+  }
+  .burger {
+    width: 20px;
+    height: 15px;
+  }
+  .logo,
+  .footer__logo {
+    width: 96px;
+  }
+  .hero__content {
+    padding: 0 23px;
+    text-align: center;
+  }
+  .hero {
+    padding-top: 30px;
+    padding-bottom: 45px;
+  }
+  .swiper-container {
+    height: 355px;
+  }
+  .hero__title {
+    padding: 0;
+    font-size: 32px;
+    line-height: 39px;
+    margin-bottom: 13px;
+  }
+  .hero__desc {
+    margin-bottom: 40px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    letter-spacing: normal;
+  }
+  .hero__btn {
+    padding: 2px 17px;
+  }
+  .btn {
+    font-size: 12px;
+  }
+  .h2 {
+    padding-left: 3px;
+    margin-bottom: 15px;
+    font-size: 28px;
+  }
+  .about {
+    padding-top: 53px;
+    padding-bottom: 41px;
+  }
+  .about__desc {
+    line-height: 28px;
+  }
+  .gallery {
+    padding-top: 53px;
+    padding-bottom: 70px;
+    height: auto;
+  }
+  .filter__title {
+    margin-bottom: 5px;
+  }
+
+  .choices__inner,
+  .gallery__filter {
+    width: 290px;
+  }
+  .swiper-container__btn {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    height: 437px;
+    padding-top: 18px;
+  }
+  .slide-img {
+    height: auto;
+  }
+  .slide-img img {
+    object-fit: cover;
+  }
+  .swiper__nav {
+    margin: 0;
+    margin-top: 20px;
+  }
+  .gallery__desc._adaptive {
+    margin-top: 19px;
+    font-size: 16px;
+  }
+
+  .catalog {
+    padding-top: 83px;
+  }
+  .catalog__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .catalog__title {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .language__item {
+    width: 32px;
+    height: 32px;
+  }
+  .language__item:not(:last-child) {
+    margin-right: 32px;
+  }
+  .catalog__desc {
+    display: none;
+  }
+  .accordion__date {
+    font-size: 18px;
+  }
+  .accordion__title {
+    padding: 20px 0 21.5px 0;
+  }
+  .accordion__btn {
+    width: 30px;
+    height: 30px;
+  }
+  .accordion__flex {
+    display: block;
+    max-height: none;
+  }
+  .ui-accordion-content {
+    margin: 18px 0;
+  }
+  .accordion__link,
+  .left__desc {
+    padding-right: 2px;
+    letter-spacing: 0.08em;
+  }
+  .left__img {
+    margin-bottom: 8px;
+  }
+  .left__title {
+    margin-bottom: 5px;
+  }
+  .events {
+    padding-top: 52px;
+  }
+  .card-events__content {
+    padding: 12px 12px 51px 26px;
+  }
+  .card-events__title {
+    padding-right: 0;
+    margin-bottom: 35px;
+  }
+  .card-events__description {
+    letter-spacing: 0.08em;
+  }
+
+
+  .footer__content {
+    flex-direction: column-reverse;
+    align-items: center;
   }
 }

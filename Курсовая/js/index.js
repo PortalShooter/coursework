@@ -77,6 +77,12 @@ $( "#accordion" ).accordion({
   heightStyle: "content",
 });
 });
+// Кнопка "Все события"
+let events = document.querySelector('.events__cards')
+let eventsBtn = document.querySelector('.event__btn')
+eventsBtn.addEventListener('click', function () {
+  events.classList.toggle('.open')
+})
 
 // Map
 ymaps.ready(init);
