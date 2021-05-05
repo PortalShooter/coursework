@@ -81,7 +81,7 @@ $( "#accordion" ).accordion({
 let events = document.querySelector('.events__cards')
 let eventsBtn = document.querySelector('.event__btn')
 eventsBtn.addEventListener('click', function () {
-  events.classList.toggle('.open')
+  events.classList.toggle('open')
 })
 
 // Map
@@ -91,7 +91,7 @@ function init(){
         center: [55.7570333262053,37.61064017142446],
         zoom: 16
     });
-    var myPlacemark = new ymaps.Placemark([55.75846197042374,37.60108483061907], {}, {
+    var myPlacemark = new ymaps.Placemark([55.7570333262053,37.61064017142446], {}, {
       iconLayout: 'default#image',
       iconImageHref: 'img/contacts/map-marker.svg',
       iconImageSize: [28, 40],
@@ -99,7 +99,53 @@ function init(){
   });
 myMap.geoObjects.add(myPlacemark);
 }
+// Карта на 320
+let map = document.querySelector('#map')
+let oldMap = document.querySelector('.contacts__flex')
+let newMap = document.querySelector('.connect__call')
+function map320() {
+  if(window.innerWidth <= 320) {
+    newMap.insertAdjacentElement('beforebegin', map)
+  }
+  else {
+    oldMap.insertAdjacentElement('beforeend', map)
+  }
+}
+map320()
+window.addEventListener('resize', () => {
+  map320()
+})
 // Select
   const element = document.querySelector('.gallery__select');
   const choices = new Choices(element,{searchEnabled: false,itemSelectText: '',shouldSort: false});
 
+// Кнопка "Категории" (в блоке "издания")
+let categories = document.querySelector('.checkbox__title')
+let checkboxList = document.querySelector('.checkbox__list')
+let checkboxLabel = document.querySelectorAll('.checkbox__label')
+checkboxLabel.forEach(el => {
+  el.addEventListener('click', function() {
+    if(el.parentElement.classList.contains('checked')) {
+      checkboxList.insertAdjacentElement('afterbegin', el.parentElement)
+    }
+    else {
+      checkboxList.insertAdjacentElement('beforebegin', el.parentElement)
+    }
+    el.parentElement.classList.toggle('checked')
+  })
+})
+categories.addEventListener('click', function() {
+  categories.classList.toggle('is-open')
+  checkboxList.classList.toggle('is-open')
+})
+if(window.innerWidth <= 320 && categories.hasAttribute('disabled')) {
+  categories.removeAttribute('disabled')
+}
+window.addEventListener('resize', () => {
+  if(window.innerWidth <= 320 && categories.hasAttribute('disabled')) {
+    categories.removeAttribute('disabled')
+  }
+  if(window.innerWidth > 320 && !categories.hasAttribute('disabled')) {
+    categories.setAttribute('disabled')
+  }
+})

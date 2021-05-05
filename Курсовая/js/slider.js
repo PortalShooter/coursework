@@ -40,39 +40,76 @@ const swiper = new Swiper('.swiper-container', {
   },
   );
 
-  const swiperEditions = new Swiper('.swiper-container__editions', {
-    speed: 1000,
-    spaceBetween: 34,
-    slidesPerView: 3,
-    slidesPerGroup: 3,
-    simulateTouch: false,
-    pagination: {
-      el: '.swiper-pagination-1',
-      type: 'fraction',
-    },
-    navigation: {
-      nextEl: '.swiper-button-next-1',
-      prevEl: '.swiper-button-prev-1',
-    },
-    breakpoints: {
-      1025: {
-        slidesPerView: 3,
-      },
-      789: {
-        spaceBetween: 50,
-      },
-      321: {
-        slidesPerView: 2,
-      }
+  const sliderEvents = document.querySelector('.events__swiper-container')
+  let swiperEvents
+  function mobileSlider() {
+    if (window.innerWidth <= 320) {
+      swiperEvents = new Swiper(sliderEvents, {
+        speed: 1000,
+        slidesPerView: 1,
+        spaceBetween: 30,
+        simulateTouch: true,
+        slideClass : 'card-events',
+        pagination: {
+          el: '.swiper-pagination__events',
+          type: 'bullets',
+          clickable: false,
+        },
+      })
     }
-  },
-  );
+    if (window.innerWidth > 320 && sliderEvents.classList.contains('swiper-container-initialized')) {
+      swiperEvents.destroy()
+    }
+  }
+  mobileSlider()
+  window.addEventListener('resize', () => {
+    mobileSlider();
+    mobileSliderEvents();
+  })
+
+  const sliderEditions = document.querySelector('.swiper-container__editions')
+  let swiperEditions
+  function mobileSliderEvents() {
+    if(window.innerWidth > 320) {
+      swiperEditions = new Swiper(sliderEditions, {
+        speed: 1000,
+        spaceBetween: 34,
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        simulateTouch: false,
+        pagination: {
+          el: '.swiper-pagination-1',
+          type: 'fraction',
+        },
+        navigation: {
+          nextEl: '.swiper-button-next-1',
+          prevEl: '.swiper-button-prev-1',
+        },
+        breakpoints: {
+          1025: {
+            slidesPerView: 3,
+          },
+          789: {
+            spaceBetween: 50,
+          },
+          321: {
+            slidesPerView: 2,
+          }
+        }
+      },
+      );
+    }
+    if (window.innerWidth <= 320 && sliderEditions.classList.contains('swiper-container-initialized')) {
+      sliderEditions.destroy()
+    }
+  }
+  mobileSliderEvents()
 
   const swiperProjects = new Swiper('.swiper-container__projects', {
     speed: 1000,
     spaceBetween: 34,
-    slidesPerView: 3,
-    slidesPerGroup: 3,
+    slidesPerView: 1,
+    slidesPerGroup: 1,
     simulateTouch: false,
     navigation: {
       nextEl: '.swiper-button-next-1',
@@ -81,6 +118,7 @@ const swiper = new Swiper('.swiper-container', {
     breakpoints: {
       1025: {
         slidesPerView: 3,
+        slidesPerGroup: 3,
       },
       321: {
         slidesPerView: 2,
