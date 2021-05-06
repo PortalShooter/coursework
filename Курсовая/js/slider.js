@@ -88,8 +88,10 @@ const swiper = new Swiper('.swiper-container', {
         breakpoints: {
           1025: {
             slidesPerView: 3,
+            spaceBetween: 50,
           },
           789: {
+            slidesPerView: 2,
             spaceBetween: 50,
           },
           321: {
@@ -119,11 +121,12 @@ const swiper = new Swiper('.swiper-container', {
       1025: {
         slidesPerView: 3,
         slidesPerGroup: 3,
+        spaceBetween: 50,
       },
       321: {
         slidesPerView: 2,
         slidesPerGroup: 2,
-        spaceBetween: 50,
+        spaceBetween: 34,
       }
     }
   },

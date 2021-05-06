@@ -149,3 +149,41 @@ window.addEventListener('resize', () => {
     categories.setAttribute('disabled')
   }
 })
+
+// Поиск на 1024 и меньше
+let searchForm = document.querySelector('.header__search')
+let firsHeader = document.querySelector('.first')
+let btnOpen = document.querySelector('.search__btn-open')
+let btnClose = document.querySelector('.btn__close')
+let logo = document.querySelector('.logo')
+let secondHeader = document.querySelector('.second')
+let searchPlaceholder = document.querySelector('.search__input')
+
+btnOpen.addEventListener('click', function() {
+  btnOpen.classList.add('is-open')
+  searchForm.classList.add('is-open')
+  firsHeader.insertAdjacentElement('beforeend', searchForm)
+
+  if(window.innerWidth <= 768) {
+
+    burgerBtn.classList.add('close')
+    logo.classList.add('close')
+    btnClose.classList.add('_active')
+    searchPlaceholder.removeAttribute('placeholder')
+
+    if(window.innerWidth <= 320) {
+      firsHeader.classList.add('is-open')
+    }
+  }
+
+  btnClose.addEventListener('click', function() {
+    burgerBtn.classList.remove('close')
+    logo.classList.remove('close')
+    btnClose.classList.remove('_active')
+    btnOpen.classList.remove('is-open')
+    searchForm.classList.remove('is-open')
+    secondHeader.insertAdjacentElement('beforeend', searchForm)
+    firsHeader.classList.remove('is-open')
+  })
+})
+
