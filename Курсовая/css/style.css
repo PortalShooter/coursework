@@ -95,6 +95,7 @@ section {
 .menu__link {
   transition: color .15s;
   font-weight: 600;
+  white-space: nowrap;
 }
 .menu__link:hover {
   color: #C283F3;
