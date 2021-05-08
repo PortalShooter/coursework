@@ -73,7 +73,7 @@ const swiper = new Swiper('.swiper-container', {
     if(window.innerWidth > 320) {
       swiperEditions = new Swiper(sliderEditions, {
         speed: 1000,
-        spaceBetween: 34,
+        spaceBetween: 30,
         slidesPerView: 3,
         slidesPerGroup: 3,
         simulateTouch: false,
@@ -95,6 +95,7 @@ const swiper = new Swiper('.swiper-container', {
             spaceBetween: 50,
           },
           321: {
+            spaceBetween: 34,
             slidesPerView: 2,
           }
         }

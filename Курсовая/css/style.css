@@ -95,7 +95,6 @@ section {
 .menu__link {
   transition: color .15s;
   font-weight: 600;
-  white-space: nowrap;
 }
 .menu__link:hover {
   color: #C283F3;
@@ -221,15 +220,14 @@ section {
   width: 300px;
   max-height: 300px;
   padding: 40px;
-  /* display: none; */
 
   position: absolute;
   top: 70px;
 
   background: rgba(0, 0, 0, 0.4);
-  transition: transform .3s;
   transform: scaleY(0);
   transform-origin: center top;
+  transition: transform .3s;
 }
 .scroll-active {
   transform: scaleY(1);
@@ -1553,7 +1551,7 @@ section {
 
   .editions {
     height: 1048px;
-    background-image: url(../img/editions/bg-m.jpg);
+    background-image: url(../img/editions/bg-m.webp);
   }
   .projects__desc {
     padding-right: 5px;
@@ -1762,6 +1760,9 @@ section {
   .events {
     padding-top: 52px;
     padding-bottom: 50px;
+  }
+  .events__swiper-container {
+    margin: 0;
   }
   .card-events__content {
     padding: 12px 12px 51px 26px;
