@@ -91,6 +91,7 @@ section {
   color: #fff;
   font-size: 18px;
   font-weight: 600;
+  white-space: nowrap;
 }
 .menu__link {
   transition: color .15s;
