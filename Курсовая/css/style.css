@@ -380,7 +380,7 @@ section {
 }
 .gallery__content {
   display: flex;
-  align-items: flex-start;
+
 }
 .gallery__title {
   display: inline-block;
@@ -388,7 +388,7 @@ section {
 }
 .gallery__filter {
   width: 400px;
-  height: 100%;
+  height: inherit;
   display: flex;
   margin-right: 5.4%;
   flex-direction: column;
@@ -511,6 +511,7 @@ section {
 .swiper-container__btn,
 .swiper-container__editions {
   width: 1150px;
+  height: 810px;
   overflow: hidden;
 }
 .swiper-container__btn {
