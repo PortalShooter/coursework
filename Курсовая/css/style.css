@@ -1663,7 +1663,7 @@ section {
     line-height: 28px;
   }
   .gallery {
-    padding-bottom: 70px;
+    padding-bottom: 60px;
     height: auto;
   }
   .filter__title {
@@ -1674,12 +1674,16 @@ section {
   .gallery__filter {
     width: 290px;
   }
+  .gallery__desc {
+    font-size: 16px;
+  }
   .swiper-container__btn {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     height: 437px;
     padding-top: 18px;
+    margin-bottom: 19px;
   }
   .slide-img {
     height: auto;
@@ -1746,6 +1750,7 @@ section {
   }
   .events__swiper-container {
     margin: 0;
+    overflow: hidden;
   }
   .card-events__content {
     padding: 12px 12px 51px 26px;
