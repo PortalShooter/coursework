@@ -32,6 +32,7 @@ const swiper = new Swiper('.swiper-container', {
         slidesPerGroup: 3,
       },
       321: {
+        spaceBetween: 34,
         slidesPerView: 2,
         slidesPerColumn: 2,
         slidesPerGroup: 3,
@@ -47,7 +48,6 @@ const swiper = new Swiper('.swiper-container', {
       swiperEvents = new Swiper(sliderEvents, {
         speed: 1000,
         slidesPerView: 1,
-        spaceBetween: 30,
         simulateTouch: true,
         slideClass : 'card-events',
         pagination: {
@@ -62,14 +62,10 @@ const swiper = new Swiper('.swiper-container', {
     }
   }
   mobileSlider()
-  window.addEventListener('resize', () => {
-    mobileSlider();
-    mobileSliderEvents();
-  })
 
   const sliderEditions = document.querySelector('.swiper-container__editions')
   let swiperEditions
-  function mobileSliderEvents() {
+  function mobileSliderEditions() {
     if(window.innerWidth > 320) {
       swiperEditions = new Swiper(sliderEditions, {
         speed: 1000,
@@ -106,7 +102,7 @@ const swiper = new Swiper('.swiper-container', {
       sliderEditions.destroy()
     }
   }
-  mobileSliderEvents()
+  mobileSliderEditions()
 
   const swiperProjects = new Swiper('.swiper-container__projects', {
     speed: 1000,
@@ -132,3 +128,8 @@ const swiper = new Swiper('.swiper-container', {
     }
   },
   );
+
+  window.addEventListener('resize', () => {
+    mobileSlider();
+    mobileSliderEditions();
+  })

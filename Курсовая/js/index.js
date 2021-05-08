@@ -198,6 +198,6 @@ btnOpen.addEventListener('click', function() {
   })
 })
 window.addEventListener('resize', () => {
-  map320()
-  galleryAdaptive()
+  map320();
+  galleryAdaptive();
 })
