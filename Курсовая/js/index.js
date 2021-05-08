@@ -71,6 +71,19 @@ if(menuLinks.length > 0) {
     }
   }
 }
+//Текст в галерее
+let gallery = document.querySelector('.gallery__content')
+let galleryText = document.querySelector('.gallery__desc')
+let galleryFilter = document.querySelector('.gallery__filter')
+function galleryAdaptive() {
+  if(window.innerWidth <= 768) {
+    gallery.insertAdjacentElement('beforeend', galleryText)
+  }
+  if(window.innerWidth > 768) {
+    galleryFilter.insertAdjacentElement('beforeend', galleryText)
+  }
+}
+galleryAdaptive()
 // Accordion
 $( function() {
 $( "#accordion" ).accordion({
@@ -112,9 +125,7 @@ function map320() {
   }
 }
 map320()
-window.addEventListener('resize', () => {
-  map320()
-})
+
 // Select
   const element = document.querySelector('.gallery__select');
   const choices = new Choices(element,{searchEnabled: false,itemSelectText: '',shouldSort: false});
@@ -186,4 +197,7 @@ btnOpen.addEventListener('click', function() {
     firsHeader.classList.remove('is-open')
   })
 })
-
+window.addEventListener('resize', () => {
+  map320()
+  galleryAdaptive()
+})

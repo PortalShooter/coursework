@@ -380,10 +380,7 @@ section {
 }
 .gallery__content {
   display: flex;
-  flex-flow: column wrap;
-  align-content: space-between;
   align-items: flex-start;
-  height: 835px;
 }
 .gallery__title {
   display: inline-block;
@@ -393,6 +390,7 @@ section {
   width: 400px;
   height: 100%;
   display: flex;
+  margin-right: 5.4%;
   flex-direction: column;
 }
 .filter__title {
@@ -468,9 +466,6 @@ section {
   margin-bottom: 9px;
   color: #fff;
   letter-spacing: 0.03em;
-}
-.gallery__desc._adaptive {
-  display: none;
 }
 
 /* Слайдер с кнопками для галереи и издания */
@@ -1322,15 +1317,10 @@ section {
   .projects__desc {
     width: auto;
   }
-  .gallery,
-  .gallery__content {
-    height: 839px;
-  }
-  .gallery__desc {
-    margin-top: 342px;
-  }
   .swiper-container__btn {
     width: 594px;
+    height: 665px;
+    margin-bottom: 30px;
   }
   .slide-img {
     height: 280px;
@@ -1460,16 +1450,13 @@ section {
   .gallery {
     height: 1169px;
   }
-  .choices {
+  .gallery__filter {
     margin-bottom: 100px;
   }
   .gallery__content {
-    flex-direction: row;
+    flex-wrap: wrap;
   }
-  .gallery__filter {
-    height: auto;
-  }
-  .gallery__desc,
+
   .burger.close,
   .logo.close,
   .btn__close {
@@ -1493,10 +1480,6 @@ section {
   }
   .btn__close::before {
     transform: rotate(-45deg);
-  }
-  .gallery__desc._adaptive {
-    display: block;
-    margin-top: 30px;
   }
   .swiper-container__btn {
     width: 668px;
@@ -1549,7 +1532,9 @@ section {
   .swiper-container__editions .swiper-wrapper {
     padding-left: 27px;
   }
-
+  .events__swiper-container {
+    margin-left: 0;
+  }
   .editions {
     height: 1048px;
     background-image: url(../img/editions/bg-m.webp);
@@ -1704,10 +1689,6 @@ section {
   .swiper__nav {
     margin: 0;
     margin-top: 20px;
-  }
-  .gallery__desc._adaptive {
-    margin-top: 19px;
-    font-size: 16px;
   }
 
   .catalog {
