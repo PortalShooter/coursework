@@ -91,10 +91,12 @@ $( "#accordion" ).accordion({
 });
 });
 // Кнопка "Все события"
-let events = document.querySelector('.events__cards')
+let events = document.querySelectorAll('.card-events')
 let eventsBtn = document.querySelector('.event__btn')
-eventsBtn.addEventListener('click', function () {
-  events.classList.toggle('open')
+events.forEach(el => {
+  eventsBtn.addEventListener('click', function () {
+    el.classList.toggle('open')
+})
 })
 
 // Map
