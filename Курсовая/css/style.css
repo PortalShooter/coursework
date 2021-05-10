@@ -1925,6 +1925,9 @@ section {
     padding: 10px 34px;
     margin-top: 12px;
   }
+  .card-events:nth-child(n) {
+    display: block;
+  }
 
 
 

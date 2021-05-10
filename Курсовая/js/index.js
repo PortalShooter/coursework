@@ -136,17 +136,19 @@ map320()
 let categories = document.querySelector('.checkbox__title')
 let checkboxList = document.querySelector('.checkbox__list')
 let checkboxLabel = document.querySelectorAll('.checkbox__label')
-checkboxLabel.forEach(el => {
-  el.addEventListener('click', function() {
-    if(el.parentElement.classList.contains('checked')) {
-      checkboxList.insertAdjacentElement('afterbegin', el.parentElement)
-    }
-    else {
-      checkboxList.insertAdjacentElement('beforebegin', el.parentElement)
-    }
-    el.parentElement.classList.toggle('checked')
+if(window.innerWidth <= 320) {
+  checkboxLabel.forEach(el => {
+    el.addEventListener('click', function() {
+      if(el.parentElement.classList.contains('checked')) {
+        checkboxList.insertAdjacentElement('afterbegin', el.parentElement)
+      }
+      else {
+        checkboxList.insertAdjacentElement('beforebegin', el.parentElement)
+      }
+      el.parentElement.classList.toggle('checked')
+    })
   })
-})
+}
 categories.addEventListener('click', function() {
   categories.classList.toggle('is-open')
   checkboxList.classList.toggle('is-open')

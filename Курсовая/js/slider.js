@@ -48,6 +48,7 @@ const swiper = new Swiper('.swiper-container', {
       swiperEvents = new Swiper(sliderEvents, {
         speed: 1000,
         slidesPerView: 1,
+        spaceBetween: 15,
         simulateTouch: true,
         slideClass : 'card-events',
         pagination: {
