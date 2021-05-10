@@ -49,26 +49,25 @@ if(menuLinks.length > 0) {
   menuLinks.forEach(menuLink => {
     menuLink.addEventListener('click', onMenuLinkClick);
   });
+}
+function onMenuLinkClick(e) {
+  const menuLink = e.target;
+  if(menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+    const gotoBlock = document.querySelector(menuLink.dataset.goto);
+    const gotoBlockValue = gotoBlock.getBoundingClientRect().top;
 
-  function onMenuLinkClick(e) {
-    const menuLink = e.target;
-    if(menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
-      const gotoBlock = document.querySelector(menuLink.dataset.goto);
-      const gotoBlockValue = gotoBlock.getBoundingClientRect().top;
-
-      if(burgerBtn.classList.contains('_active')) {
-        document.body.classList.remove('_lock')
-        burgerBtn.classList.remove('_active')
-        menu.classList.remove('_active')
-        enter.classList.remove('_active')
-      }
-
-      window.scrollTo({
-        top: gotoBlockValue,
-        behavior: 'smooth'
-      })
-      e.preventDefault();
+    if(burgerBtn.classList.contains('_active')) {
+      document.body.classList.remove('_lock')
+      burgerBtn.classList.remove('_active')
+      menu.classList.remove('_active')
+      enter.classList.remove('_active')
     }
+
+    window.scrollTo({
+      top: gotoBlockValue + pageYOffset,
+      behavior: 'smooth'
+    })
+    e.preventDefault();
   }
 }
 //Текст в галерее
@@ -96,8 +95,9 @@ let eventsBtn = document.querySelector('.event__btn')
 events.forEach(el => {
   eventsBtn.addEventListener('click', function () {
     el.classList.toggle('open')
+  })
 })
-})
+eventsBtn.addEventListener('click', onMenuLinkClick)
 
 // Map
 ymaps.ready(init);

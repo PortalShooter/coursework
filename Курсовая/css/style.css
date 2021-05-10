@@ -202,7 +202,7 @@ section {
 }
 .search__input {
   width: 218px;
-  padding-bottom: 6px;
+  padding-bottom: 3px;
   background: transparent;
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.85);
@@ -210,6 +210,7 @@ section {
   caret-color: #C283F3;
   font-size: 18px;
   transition: border-color .15s;
+  line-height: 21px;
 
 }
 .search__input::placeholder {

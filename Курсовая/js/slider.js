@@ -35,7 +35,7 @@ const swiper = new Swiper('.swiper-container', {
         spaceBetween: 34,
         slidesPerView: 2,
         slidesPerColumn: 2,
-        slidesPerGroup: 3,
+        slidesPerGroup: 2,
       }
     }
   },
@@ -88,11 +88,13 @@ const swiper = new Swiper('.swiper-container', {
           },
           789: {
             slidesPerView: 2,
+            slidesPerGroup: 2,
             spaceBetween: 50,
           },
           321: {
             spaceBetween: 34,
             slidesPerView: 2,
+            slidesPerGroup: 2,
           }
         }
       },
