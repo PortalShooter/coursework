@@ -486,7 +486,7 @@ section {
   width: 100%;
   height: 100%;
 }
-.slide-img::before {
+.gallery__slide-img::before {
   content: '';
   position: absolute;
   top: 0;
@@ -497,10 +497,10 @@ section {
   background: rgba(194, 131, 243, 0.4);
   transition: opacity .15s;
 }
-.slide-img:active::before {
+.gallery__slide-img:active::before {
   opacity: 1;
 }
-.slide-img::after {
+.gallery__slide-img::after {
   position: absolute;
   content: url(../img/gallery/loupe.svg);
   top: 25px;
@@ -514,7 +514,7 @@ section {
   background: rgba(0, 0, 0, 0.5);
   transition: opacity .15s;
 }
-.slide-img:hover::after {
+.gallery__slide-img:hover::after {
   opacity: 1;
 }
 .swiper-container__btn,
