@@ -17,12 +17,12 @@ const swiper = new Swiper('.swiper-container', {
     slidesPerColumn: 1,
     simulateTouch: false,
     pagination: {
-      el: '.swiper-pagination-1',
+      el: '.gallery__swiper-pagination',
       type: 'fraction',
     },
     navigation: {
-      nextEl: '.swiper-button-next-1',
-      prevEl: '.swiper-button-prev-1',
+      nextEl: '.gallery__swiper-button-next',
+      prevEl: '.gallery__swiper-button-prev',
     },
     breakpoints: {
       1025: {
@@ -75,12 +75,12 @@ const swiper = new Swiper('.swiper-container', {
         slidesPerGroup: 3,
         simulateTouch: false,
         pagination: {
-          el: '.swiper-pagination-1',
+          el: '.editions__swiper-pagination',
           type: 'fraction',
         },
         navigation: {
-          nextEl: '.swiper-button-next-1',
-          prevEl: '.swiper-button-prev-1',
+          nextEl: '.editions__swiper-button-next',
+          prevEl: '.editions__swiper-button-prev',
         },
         breakpoints: {
           1025: {
@@ -114,8 +114,8 @@ const swiper = new Swiper('.swiper-container', {
     slidesPerGroup: 1,
     simulateTouch: false,
     navigation: {
-      nextEl: '.swiper-button-next-1',
-      prevEl: '.swiper-button-prev-1',
+      nextEl: '.projects__swiper-button-next',
+      prevEl: '.projects__swiper-button-prev',
     },
     breakpoints: {
       1025: {

@@ -1172,6 +1172,7 @@ section {
 }
 .swiper-button-disabled {
   pointer-events: none;
+  opacity: .55;
 }
 
 
@@ -1948,9 +1949,6 @@ section {
   .card-events:nth-child(n) {
     display: block;
   }
-
-
-
 
   .swiper-container__projects {
     width: 195px;
