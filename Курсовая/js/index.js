@@ -178,13 +178,13 @@ btnOpen.addEventListener('click', function() {
   btnOpen.classList.add('is-open')
   searchForm.classList.add('is-open')
   firsHeader.insertAdjacentElement('beforeend', searchForm)
+  searchPlaceholder.removeAttribute('placeholder')
 
   if(window.innerWidth <= 768) {
 
     burgerBtn.classList.add('close')
     logo.classList.add('close')
     btnClose.classList.add('_active')
-    searchPlaceholder.removeAttribute('placeholder')
 
     if(window.innerWidth <= 320) {
       firsHeader.classList.add('is-open')

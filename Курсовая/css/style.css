@@ -479,7 +479,6 @@ section {
 
 /* Слайдер с кнопками для галереи и издания */
 .slide-img {
-  width: 350px;
   height: 350px;
 }
 .slide-img img {
